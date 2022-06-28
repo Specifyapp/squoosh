@@ -1,3 +1,5 @@
+# ⚠️ This is a fork of the squoosh library because the official npm package is not up to date with the GitHub repository.
+
 # libSquoosh
 
 libSquoosh is an _experimental_ way to run all the codecs you know from the [Squoosh] web app directly inside your own JavaScript program. libSquoosh uses a worker pool to parallelize processing images. This way you can apply the same codec to many images at once.
@@ -111,15 +113,15 @@ Information about a decoded image is available at `Image.decoded`. It looks some
 console.log(await image.decoded);
 // Returns:
 {
- bitmap: {
+  bitmap: {
     data: Uint8ClampedArray(47736584) [
       225, 228, 237, 255, 225, 228, 237, 255, 225, 228, 237, 255,
-      225, 228, 237, 255, 225, 228, 237, 255, 225, 228, 237, 255,
-      225, 228, 237, 255,
-      ... //the entire raw image
-    ],
+        225, 228, 237, 255, 225, 228, 237, 255, 225, 228, 237, 255,
+        225, 228, 237, 255,
+  ... //the entire raw image
+  ],
     width: 4606,  //pixels
-    height: 2591  //pixels
+      height: 2591  //pixels
   },
   size: 2467795  //bytes
 }
@@ -133,19 +135,19 @@ console.log(image.encodedWith.jxl);
 {
   optionsUsed: {
     quality: 75,
-    baseline: false,
-    arithmetic: false,
-    progressive: true,
-    ... //all the possible options for this encoder
+      baseline: false,
+      arithmetic: false,
+      progressive: true,
+  ... //all the possible options for this encoder
   },
   binary: Uint8Array(1266975) [
-      1,   0,   0,   1,   0,  1,  0,  0, 255, 219,  0, 132,
-    113, 119, 156, 156, 209,  1,  8,  8,   8,   8,  9,   8,
+    1,   0,   0,   1,   0,  1,  0,  0, 255, 219,  0, 132,
+      113, 119, 156, 156, 209,  1,  8,  8,   8,   8,  9,   8,
       9,  10,  10,   9,
-    ... //the entire raw encoded image
-  ],
+... //the entire raw encoded image
+],
   extension: 'jxl',
-  size: 1266975  //bytes
+    size: 1266975  //bytes
 }
 ```
 
